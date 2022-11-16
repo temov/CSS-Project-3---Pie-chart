@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" lang="mk">
+		<title>Pie Chart</title>
+		<style>
+body { background-color: #FFA05D; }
+            
+ .piechart {
+		position: relative; left:100px;top:100px;
+        display: block;
+		height: 200px; width: 200px;
+        
+            }
+    .common{
+            position: absolute;
+             width: inherit;
+            height:inherit;
+            border-radius: 75%;
+            }
+.border{
+    border: 2px solid white;
+    width: 205px;
+    height: 205px;
+    position: absolute;top:-5px; left: -5px;
+            }
+.base { background: #86A0A1; }
+.slice{ clip: rect(0px, 100px,200px, 0px);}
+p{
+    font-size: 16px;
+    font-style: 'Georgia', sans-serif;
+    color: white;
+            }
+    
+    .slice_1{
+        
+        background-color:blue;
+        position: absolute;
+                
+            }
+    .slice_1_1{
+        -webkit-transform: rotate(90deg);
+		-moz-transform: rotate(90deg);
+		-o-transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		transform: rotate(90deg);
+            }
+    .slice_1_2{
+        background-color: #2E8036;
+        -webkit-transform: rotate(135deg);
+		-moz-transform: rotate(135deg);
+		-o-transform: rotate(135deg);
+		-ms-transform: rotate(135deg);
+		transform: rotate(135deg);
+            }
+    .slice_2{
+        transform: rotate(90deg);
+        background-color:red;
+        position: absolute;
+                
+            }
+    .slice_3{
+        -webkit-transform: rotate(150deg);
+		-moz-transform: rotate(150deg);
+		-o-transform: rotate(150deg);
+		-ms-transform: rotate(150deg);
+		transform: rotate(150deg);
+        background-color: aquamarine;   
+            }
+    .slice_4{
+        background-color: yellow; 
+        -webkit-transform: rotate(20deg);
+		-moz-transform: rotate(20deg);
+		-o-transform: rotate(20deg);
+		-ms-transform: rotate(20deg);
+		transform: rotate(20deg);
+            }
+        p.label {
+		color: #182020; 
+        font-weight: bold;
+		font-size: 20px;
+        font-style:italic;
+            text-align: right;
+		position: absolute; left: 170px;
+		border-bottom: 2px solid rgba(255,255,255,.5);
+		padding: 0px 15px 5px 50px;
+		width: 100px;
+	}
+            .slice_1_label{
+             top:-10px;
+           
+            }
+            .slice_2_label{
+             top:35px;
+            }
+            .slice_3_label{
+             top:100px; right: 150px;
+            }
+        </style>
+	</head>
+	<body>
+
+<div class="piechart">
+<div class="common border"></div>
+    <div class="common base"></div>
+    <div class="common slice slice_1_2"></div>
+    <div class="common slice slice_4"></div>
+    <div class="common slice slice_1_1">
+    <div class="common slice slice_1">
+    <div class="common slice slice_2"></div>
+    <div class="common slice slice_3"></div>
+    </div>
+
+    </div>
+    <p class="label slice_1_label">Textile</p>
+    <p class="label slice_2_label">Agriculture</p>
+    <p class="label slice_3_label">Metalurgy</p>
+</div>
+	</body>
+</html>
